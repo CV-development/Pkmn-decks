@@ -1,0 +1,160 @@
+body {
+  font-family: 'Raleway', sans-serif; 
+  margin: 0px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.layout {
+  margin: 1em;
+  gap: 1em;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+  "a b"
+  "c c"
+  "d d";
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr;
+}
+
+.a {
+  background-color: white;
+  grid-area: a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.b {
+  background-color: white;
+  grid-area: b;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  color: #EB1D27;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  position: sticky;
+}
+
+.b p{
+  font-size: larger;
+  font-weight: 600;
+}
+
+.c {
+  grid-area: c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/img01.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+}
+
+.c-side {
+  background-image: none;
+  color: #000;
+}
+
+.gallery-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 35px;
+}
+
+.gallery-cards img {
+  width: 150px;
+  transition: transform .2s;
+}
+
+.gallery-cards img:hover {
+  transform: scale(1.2);
+}
+
+.d {
+  grid-area: d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #012F6B;
+  color: #fff;
+  text-align: center;
+  height: 100px
+}
+
+@media (min-width: 576px) {
+  .layout {
+    grid-template-columns: 1fr 10fr;
+    grid-template-areas:
+    "a c"
+    "b c"
+    "b c"
+    "b c"
+    "d d";
+    }
+
+    .b {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .menu-item {
+      height: 3em;
+    }
+
+    .b p {
+      margin: 0%;
+    }
+
+    .c {
+      overflow: scroll;
+    }
+  }    
+
+/* 
+
+
+
+  
+
+
+  .header-title {
+    padding: 0px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-b {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .catalog {
+    overflow: scroll;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  ul { padding: 0;}
+  }
+   */
